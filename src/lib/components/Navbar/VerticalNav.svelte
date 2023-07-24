@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import { lang,theme,white,black } from '$lib/stores';
 	import { menu } from '$lib/content/common';
-	$: titul = $page.url.pathname.split('/').join(' | ');
 </script>
 
 <div class="nav"
@@ -39,6 +38,7 @@
 		top: 0;
 		padding-top: 59.5px;
 		z-index: 2;
+		border-right: 3px solid black;
 		text-overflow: ellipsis;
 	}
 	.nav-item {

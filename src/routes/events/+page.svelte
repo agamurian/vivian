@@ -1,27 +1,76 @@
-<div class="p-5">
-  <h1>Events</h1>
-  <a href="/events/201219-branch">201219-branch</a>
-  <a href="/events/210119-cyan">210119-cyan</a>
-  <a href="/events/210124-lection-3d">210124-lection-3d</a>
-  <a href="/events/210204-diana-lapina">210204-diana-lapina</a>
-  <a href="/events/210212-sazhina">210212-sazhina</a>
-  <a href="/events/210326-chervonnaya">210326-chervonnaya</a>
-  <a href="/events/210423-mayday">210423-mayday</a>
-  <a href="/events/210709-plesen">210709-plesen</a>
-  <a href="/events/210918-priznaki">210918-priznaki</a>
-  <a href="/events/201227-echo">201227-echo</a>
-  <a href="/events/210123-lection-hackart">210123-lection-hackart</a>
-  <a href="/events/210129-printmarket">210129-printmarket</a>
-  <a href="/events/210206-eto-ne-ya">210206-eto-ne-ya</a>
-  <a href="/events/210305-sadovnik">210305-sadovnik</a>
-  <a href="/events/210415-printmarket">210415-printmarket</a>
-  <a href="/events/210519-karakuli">210519-karakuli</a>
-  <a href="/events/210807-mistiki">210807-mistiki</a>
-</div>
+<script lang="ts">
+	import { formatDate } from '$lib/utils';
+	import { lang } from '$lib/stores';
+	import { translationOf } from '$lib/content/api.js';
+	export let data;
+</script>
+
+{#each data.events.data as event}
+	{@const et = data.eventsTranslations.data}
+	<a href={'/events/' + event.url}>
+		<div class="event">
+			<div class="event-detail flex-1">
+				<p class="pvh3"><b>{translationOf(event, et, $lang)["title"]}</b></p>
+			</div>
+			<div class="event-detail flex-2">
+				<p class="pvh2">Даня Берковский</p>
+			</div>
+			<div class="event-detail">
+				<p class="pvh2">{formatDate(event.date)}</p>
+			</div>
+		</div>
+	</a>
+{/each}
 
 <style>
   a {
     margin: 1rem;
     display: flex;
   }
+	.pvh2 {
+		font-size: 4vh;
+	}
+	.pvh3 {
+		font-size: 6vh;
+	}
+	.hvh4 {
+		font-size: 8vh;
+		font-weight: bold;
+	}
+	.string-header {
+		display: flex;
+		align-items: center;
+		padding-left: 2em;
+		width: 100%;
+		height: calc(25vh - 40px);
+		border-bottom: 3px black solid;
+	}
+	.event-big {
+		width: 100%;
+		height: calc(50vh - 80px);
+		border-bottom: 3px black solid;
+	}
+	.event {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		height: calc(25vh - 40px);
+		border-bottom: 3px black solid;
+	}
+	.event-detail {
+		display: flex;
+		align-items: center;
+		padding-left: 2em;
+		padding-right: 2em;
+		justify-items: center;
+		text-align: center;
+	}
+	.event-detail:not(:last-child) {
+		border-right: 3px dashed black;
+	}
+	.image-fit {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+	}
 </style>

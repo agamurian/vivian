@@ -40,7 +40,11 @@
 	"type": "module",
 	"dependencies": {
 		"@directus/sdk": "^10.3.5",
+<<<<<<< HEAD
 		"marked": "^5.1.1",
 		"svelte-masonry": "^0.1.1"
+=======
+		"marked": "^5.1.1"
+>>>>>>> 0ec964f (directus connected, major jump forward)
 	}
 }

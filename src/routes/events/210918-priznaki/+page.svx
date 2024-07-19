@@ -1,0 +1,132 @@
+---
+title: Я подаю вам признаки жизни
+titleen: Showing signs of life
+path: /events/210918-priznaki
+date: 2021-09-18
+dateend: 2021-10-18
+summary: Выствка Алины Измайловой. Куратор - Евгения Койнова
+summaryen: Alina Izmailova, curated by Jenya Koynova
+eventtypes: ['выставка']
+authors: ['Алина Измайлова','Евгения Койнова']
+ru: ru
+---
+
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  $: $lang == "ru" ? localtitle.set(title) : localtitle.set(titleen)
+</script>
+
+<style>
+img {
+margin: auto;
+padding: 30px;
+}
+</style>
+
+#### {($lang == ru) ? title : titleen}
+###### {($lang == ru) ? summary : summaryen}
+
+![афиша](./images/210918-a.webp)
+
+{#if $lang == 'en'}
+Существует условный список из девяти признаков, которым отвечает живое: питание, дыхание, выделения, рост, развитие, смерть, размножение, наследственность и чувствительность. Однако часто эти проявления можно встретить и в неживой природе; более того – количество свойств разнится в зависимости от того, к какому научному источнику мы обращаемся. Важно отметить: то, что гарантирует выживание в одном случае, оказывается бесполезно в другом. Получается, что мы не можем полагаться на аналитический метод, чтобы утверждать чью-либо витальность. ______________________________________________
+Отвечает ли моя природа избранным критериям?
+—
+Я подаю вам эти признаки.
+17.00 18/09/2021 Суворовский пр., 43-45в, Санкт-Петербург
+
+{/if}
+
+{#if $lang == 'ru'}
+
+There is a conventional list of nine signs which may be found in any living being: nourishment, breathing, excretion, growth, evolution, mortality, reproduction, heredity, and sentience. However, sometimes we can see inanimate nature meeting these criteria as well. Furthermore, the number of these features may vary depending on what scientific sources we consult. Note that what guarantees survival in one situation may prove useless in another. Thus, seeking to establish the vitality of any particular being, we cannot rely on the analytical method.
+____________________________________
+Does my nature comply with the criteria?
+—
+I show you these signs.
+17.00 18/09/2021 Suvorovsky pr., 43-45v, Saint Petersburg
+
+{/if}
+
+
+------------------------------------
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNEhoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f272aba13a0c5f3088a6d4293edfd273a830c047/E16A2603.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM2JoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--50ee1cee4443fbae1291f60aa0b629e86c705dcd/E16A2604.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM1hoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--64d11b5b45c62bd7a7dcd5c5a442795eba0f3406/E16A2606.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM1RoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b3a9ee9401540b2fb54cf016afeafd975c99c6e3/E16A2607.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNFRoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--7a629f4889394b216e78fe071d97f409aae21c13/E16A2608.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM2ZoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ed416844c51cb69a03a14b3af0e573d82bd0ebf1/E16A2609.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNExoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--354f1c949007d30027953712d6093ab5e94dd272/E16A2610.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM2poQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3461144d0fbf6814b66e56a24f0d028e224c83ae/E16A2611.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNFBoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--19997a0aaf7b148140fb459ed3e98adbd79fae1d/E16A2612.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMy9oQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--247e6f679a5d7ce49f4dc6d45f34a9f5ca03af10/E16A2613.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM25oQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--f63433b0543c2bbf998780a6f88468baa22b254a/E16A2614.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNFhoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8d0467acf17358f4afe71cb405819d6d8d8d719b/E16A2615.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNGZoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ca7e3fd60eabb4584a36789f5f8eadeb0873bbf4/E16A2616.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNGJoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3dde7c8d6eae494d3790f0a17c7e47fc6b368fd5/E16A2618.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMzNoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--4b6dd300b409142c3abfd2d99f4b51927c277cd3/E16A2621.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNG5oQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fe1fe79b009717537a7d9f5e6582743461a76a99/E16A2623.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNGpoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fd8daccbdba6782076ca957b1c0d537bf23f59aa/E16A2624.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNHZoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c18d7890a42e7486aaec07a0c4326a462e8ed893/E16A2626.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNDdoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--00ae426b51c55feb57a312784bd6a587fc731894/E16A2627.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNURoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0024cb0f043929c20969d741bf866f55b59304ac/E16A2628.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNHJoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fcdc68275148978d452772359ce82338c1cf7953/E16A2629.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNDNoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--0d9eb997e2a879d3f71c48b35e688250fa80372f/E16A2630.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNC9oQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--8f1f350c5016212e95e8776a762adc1770e651ab/E16A2631.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNUhoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1692301e9b4e1ee9897437c58c41cc36e7369699/E16A2633.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM3poQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--dfb798b7b4096fe86d6180d07b47872bc1576c64/E16A2634.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM3JoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--512844d06782a2bef9132dbb22ebf2a821f8d8eb/E16A2638.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNUxoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--b0ccf184b975c948cc395b831f9fa4a34b9a10c5/E16A2639.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVhoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--55b753706d06b24198376f5685cb99e60b51198e/E16A2640.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNWZoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--98ff9abfdd87c0e76508744396c14163ec981601/E16A2643.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNWJoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fcbaf728fdc84fd9f33fea7a6e18aa65f44ff802/E16A2644.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVBoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--ff5c27c3031a262e5c58d2401cb9e7faa60e997b/E16A2645.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMzdoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--5502abaecb4ca02936d5ad5ab197d1e4cb320a95/E16A2646.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNHpoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e307392effba4bf8186f8fc4a345e09ead242ddf/E16A2647.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNVRoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--710e9207f2e21f989769a58cb52d9691f29e2b1e/E16A2648.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNWpoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--e81747758698a68a592e8844fbbb90ad2fdf68c1/E16A2650.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNW5oQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--610c4225ddb80baac5b5d22606b3ccaa9cec80e6/E16A2651.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNXZoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--30c3ec113fa24cd877e40157717983fcac30a53c/E16A2653.jpg" >
+    
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNXJoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--c3854f469a53119b15489b0a4b72d778cde7284d/E16A2655.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBM3ZoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--6b1afcb2085f0c7c548c6e5a76f3e8acf73fe456/E16A2656.jpg" >
+
+    <img alt="Alina Izmailova Signs exhibition Kerka gallery" src="https://tzvetnik.online/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNERoQVE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--fe16b7a3d6c3a80207be7e2f5340d66bab46b8b4/E16A2657.jpg" >

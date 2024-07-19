@@ -1,0 +1,33 @@
+---
+title: Выступление Дианы Лапиной 
+path: /events/diana-lapina-040221
+date: 2021-02-04
+dateend: 2021-02-04
+summary: Абстрактные ambient/noise зарисовки
+eventtypes: ['ambient', 'noise', 'sound']
+authors: ['Диана Лапина','Андрей Головин']
+---
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
+
+**Чт. 04.02 :** 20:00 - 22:00
+
+![афиша](./images/diana-afish.webp)
+
+На закрытии принтмаркета в четверг в 20:00 звуковая художница Диана Лапина выступла с импровизационными звуковыми зарисовками, сделанными с помощью виртуальных синтезаторов.
+
+Визуальная Часть - Андрей Головин:
+
+![Андрей Головин Визульная Часть](./images/dl1.webp)
+
+![Андрей Головин Визульная Часть](./images/dl2.webp)
+
+![Андрей Головин Визульная Часть](./images/dl3.webp)
+
+

@@ -1,0 +1,23 @@
+---
+title: Выставка Коли Садовника
+path: /events/210305-sadovnik
+date: 2021-03-05
+dateend: 2021-03-21
+summary: Живопись
+eventtypes: ['выставка']
+authors: ['Коля Садовник']
+---
+
+<script>
+  import { backgroundColor, lang, hideNav,localtitle } from '$lib/stores';
+  localtitle.set(title)
+</script>
+
+#### {title}
+###### {summary}
+
+Открытие **Пт 05.02 :** 19:00 <br/>
+
+![афиша](./images/sadovnik.webp)
+
+Коля Садовник, живопись из серий "Космос на районе" и "Сутра сердца" 

@@ -83,6 +83,9 @@
 		border-bottom: 3px gray solid;
     width: calc(100vw - 30px);
 	}
+  .event:hover {
+    background: gray;
+  }
 	.event-detail {
     display: flex;
 	}

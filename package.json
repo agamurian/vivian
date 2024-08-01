@@ -41,6 +41,7 @@
 	"dependencies": {
 		"@directus/sdk": "^10.3.5",
 		"marked": "^5.1.1",
-		"svelte-masonry": "^0.1.1"
+		"svelte-masonry": "^0.1.1",
+		"tailwind": "^4.0.0"
 	}
 }

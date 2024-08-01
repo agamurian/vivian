@@ -2,10 +2,10 @@ import { Directus } from '@directus/sdk';
 const directus = new Directus('http://62.113.115.216:8055');
 
 // Working with translations
-export const locale_mapping = { en: 'en-US', ru: 'ru-RU', fr: 'fr-FR' };
+export const locale_mapping = { en: 'en-US', ru: 'ru-RU' };
 
-export function translationOf(items, translations, lang): string {
-	const trKeys = items['translations'];
+export function translationOf(item, translations, lang): string {
+	const trKeys = item['translations'];
 	for (const key of trKeys) {
 		const tr = translations.find((_) => _.id === key);
 		if (tr.languages_id === locale_mapping[lang]) {

@@ -19,7 +19,7 @@
         <p class="pvh2">{et.content}</p>
 			</div>
 			<div class="event-detail">
-				<p class="pvh1">{formatDate(event.date)}</p>
+				<p class="pvh2">{formatDate(event.date)}</p>
 			</div>
 		</div>
   </a>
@@ -33,31 +33,17 @@
     margin: 0rem;
     display: flex;
   }
-	.pvh1 {
-    font-size: 2vh;
-    text-overflow: ellipsis;
-    overflow:hidden;
-    max-height: 100%;
-    max-width: 30vh;
-    padding: 15px;
-    padding-left: 20px;
-	}
 	.pvh2 {
-    font-size: 2vh;
+    font-size: 4vh;
     text-overflow: ellipsis;
     overflow:hidden;
     max-height: 100%;
-    max-width: 75vw;
-    padding:15px;
 	}
 	.pvh3 {
-		font-size: 3vh;
+		font-size: 6vh;
     text-overflow: ellipsis;
     overflow:hidden;
     max-height: 100%;
-    max-width: 40vw;
-    padding: 15px;
-    padding-left: 20px;
 	}
 	.hvh4 {
 		font-size: 8vh;
@@ -66,28 +52,31 @@
 	.string-header {
 		display: flex;
 		align-items: center;
-		padding-left: 1em;
+		padding-left: 0em;
 		width: 100%;
 		height: calc(25vh - 40px);
-		border-bottom: 3px gray solid;
+		border-bottom: 3px black solid;
 	}
 	.event-big {
 		width: 100%;
 		height: calc(50vh - 80px);
-		border-bottom: 3px gray solid;
+		border-bottom: 3px black solid;
 	}
 	.event {
 		display: flex;
 		flex-direction: row;
+		width: 100%;
 		height: calc(25vh - 40px);
-		border-bottom: 3px gray solid;
-    width: calc(100vw - 30px);
+		border-bottom: 3px black solid;
 	}
 	.event-detail {
-    display: flex;
+		display: flex;
+		align-items: center;
+		padding: 0em;
+		justify-items: center;
 	}
 	.event-detail:not(:last-child) {
-		border-right: 3px dashed gray;
+		border-right: 3px dashed black;
 	}
 	.image-fit {
 		max-width: 100%;

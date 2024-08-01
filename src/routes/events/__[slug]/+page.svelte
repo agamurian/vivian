@@ -11,7 +11,7 @@
 </script>
 
 <div class="p-5">
-	<h1>{translation.title}</h1>
+	<h1>{translation}</h1>
 </div>
 <img style="align-self: right;" src={getImageFromApi(event.image)} />
 

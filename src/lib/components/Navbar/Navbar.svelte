@@ -3,9 +3,9 @@
 	import { theme, white, black, lang, hideNav,localtitle } from '$lib/stores';
 	import LangSwitcher from './LangSwitcher.svelte';
   import ThemeSwitcher from './ThemeSwitcher.svelte';
-	import KerkaNav from '../Icons/KerkaNav.svelte';
 	import VerticalNav from './VerticalNav.svelte';
   let lastScrollTop = 0;
+  // TODO: last slash
 	$: title = $page.url.pathname.split('/').slice(0,-1).join('/');
   let hidebale = false
 </script>
@@ -31,8 +31,8 @@
   style="
   background-color: { ($theme == "dark" ) ? $black : $white}; 
   color: { ($theme == 'dark' ) ? $white : $black }
-  height: 50px;
-	border-bottom: 3px solid { ($theme == 'dark' ) ? $white : $black };
+  height: 2em;
+	border-bottom: 2px solid { ($theme == 'dark' ) ? $white : $black };
   "
 >
 	<section class="text-left w-15 p-0">
@@ -45,12 +45,12 @@
 		<section class="w-25 nav-item" style="width: 80vw">
       <div class='bread' style="background-color: #7550; width: 100vw; margin-top: -0.05rem; border:dotted 0.2rem #0000 ">
         {#if title.length > 0 }
-        <span class='nav_title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.2rem;overflow:hidden'>
+        <span class='nav_title' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 1em;padding-left:1em;border-radius: 0.2em;overflow:hidden'>
           <a href = "{title}">
           {title}
           </a>
         </span>
-        <span class='localtitle' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 15px;padding-left:15px;border-radius: 0.2rem;overflow:hidden'>
+        <span class='localtitle' style='color: { ($theme == 'dark' ) ? $white : $black };padding-right: 1em;padding-left:1em;border-radius: 0.2em;overflow:hidden'>
           {$localtitle}
         </span>
         {/if}
@@ -76,7 +76,7 @@
     flex-wrap: nowrap;
   text-overflow: ellipsis;
   transition: 1s ease;
-  font-size: 17px;
+  font-size: 0.75em;
   font-weight: 600;
   background-color: #0440;
   }
@@ -94,7 +94,7 @@
   transition: 1s ease;
   font-size: 1.0rem;
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.25em;
   background-color: #0440;
   }
   .localtitle:hover{
@@ -104,18 +104,19 @@
     flex-wrap: nowrap;
 		display: flex;
 		flex: 0;
-    padding: 10px;
+    padding: 0.5em;
+    font-size: 0.75em;
 	}
 	.navbar {
-    height: 50px;
+    height: 2em;
     flex-wrap: nowrap;
-		z-index: 2000;
-		font-size: 17px;
+		z-index: 1;
+		font-size: 1em;
 		top: 0;
 		transition: 0.4s ease-out;
 	}
 	.hide-nav {
-		top: -60px;
+		top: -2.5em;
 		transition: 0.4s ease-out;
 	}
 </style>

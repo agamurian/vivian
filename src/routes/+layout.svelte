@@ -34,6 +34,6 @@
     transition: 0.3 ease;
   }
 	.content {
-		padding-left: 50px;
+		padding-left: 2em;
 	}
 </style>

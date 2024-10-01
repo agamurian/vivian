@@ -1,24 +1,27 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { lang,theme,white,black } from '$lib/stores';
+	import { lang, theme, white, black } from '$lib/stores';
 	import { menu } from '$lib/content/common';
+	$: border_color = ($theme == 'dark')  ? $white : $black
+	$: background_color = ($theme == 'dark')  ? $black : $white
 </script>
 
 <div class="nav"
      style="
-     border-color: {($theme == 'dark')  ? $white : $black};"
+     border-color: {border_color};
+		 background-color: {background_color};
+		 "
   >
 	{#each menu as item}
-		<a href={item.href}>
-      <div class="nav-item"
-     style="
-     border-color:{($theme == 'dark')  ? $white : $black};"
+      <a  href={item.href} class="nav-item"
+				style="
+
+				"
         class:active={item.href == $page.route.id}>
 				<span class="mx-5">
 					{item[$lang]}
 				</span>
-			</div>
-		</a>
+			</a>
 	{/each}
 </div>
 
@@ -30,34 +33,37 @@
 		text-decoration: none;
 	}
 	.nav {
-    border-right: 3px solid;
 		height: 100vh;
-		width: 50px;
+		width: 2em;
 		position: fixed;
 		left: 0;
 		top: 0;
-		padding-top: 40px;
+		padding-top: calc(2em - 2px);
 		z-index: 2;
-		border-right: 3px solid black;
+		border-right: 4px solid;
 		text-overflow: ellipsis;
 	}
 	.nav-item {
+    border-top: 2px solid;
 		white-space: nowrap;
 		writing-mode: vertical-rl;
 		transform: rotate(180deg);
 		text-orientation: mixed;
 		text-align: center;
 		display: block;
-		padding: 10px;
+		padding: 0.5em;
 		width: 100%;
-		height: calc(22vh - 40px);
+		height: calc(20vh - 1em);
+		font-size: 0.75em;
+		font-weight: 300;
 	}
 
-  .nav-item:not(:first-child) {
-    border-top: 3px dashed;
+  .nav-item:first-child {
+    border-bottom: 2px solid ;
   }
+
 	.nav-item:hover {
-    text-decoration: underline 2px dashed;
+		background-color: #909090;
 	}
 
 	.active {

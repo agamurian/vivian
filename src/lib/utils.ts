@@ -1,5 +1,4 @@
 const apiRoot = 'https://admin.viviandelrio.com';
-import {events} from '$lib/content/api'
 
 export function getImageFromApi(hash: string, maxWidth?: number): string {
 	return `${apiRoot}/assets/${hash}?width=${maxWidth ?? ''}`;

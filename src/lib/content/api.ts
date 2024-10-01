@@ -17,7 +17,8 @@ export function translationOf(item, translations, lang): string {
 
 // Exporting itemss
 export const events = directus.items('events');
-export const projects = directus.items('projects');
-export const exhibitions = directus.items('events');
-export const news = directus.items('news');
 export const eventsTranslations = directus.items('events_translations');
+export const projects = directus.items('projects');
+export const projectsTranslations = directus.items('projects_translations');
+export const news = directus.items('news');
+export const newsTranslations = directus.items('news_translations');

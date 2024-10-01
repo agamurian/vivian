@@ -31,13 +31,12 @@
   style="
   background-color: { ($theme == "dark" ) ? $black : $white}; 
   color: { ($theme == 'dark' ) ? $white : $black }
-  height: 60px;
+  height: 50px;
 	border-bottom: 3px solid { ($theme == 'dark' ) ? $white : $black };
   "
 >
 	<section class="text-left w-15 p-0">
 		<a class="m-0 p-0" href="/#">
-			<KerkaNav />
 		</a>
 	</section>
 
@@ -77,9 +76,8 @@
     flex-wrap: nowrap;
   text-overflow: ellipsis;
   transition: 1s ease;
-  font-size: 1.0rem;
+  font-size: 17px;
   font-weight: 600;
-  padding: 1rem;
   background-color: #0440;
   }
   .nav_title:hover{
@@ -96,7 +94,7 @@
   transition: 1s ease;
   font-size: 1.0rem;
   font-weight: 600;
-  padding: 0rem;
+  padding: 0.5rem;
   background-color: #0440;
   }
   .localtitle:hover{
@@ -106,13 +104,13 @@
     flex-wrap: nowrap;
 		display: flex;
 		flex: 0;
-		padding: 7px 7px 7px 15px;
-		height: 100%;
+    padding: 10px;
 	}
 	.navbar {
+    height: 50px;
     flex-wrap: nowrap;
 		z-index: 2000;
-		font-size: 20px;
+		font-size: 17px;
 		top: 0;
 		transition: 0.4s ease-out;
 	}

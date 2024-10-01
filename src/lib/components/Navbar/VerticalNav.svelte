@@ -24,7 +24,7 @@
 
 <style>
 	span {
-		text-rendering: geometricPrecision;
+		text-rendering: optimizeLegibility;
 	}
 	a {
 		text-decoration: none;
@@ -32,11 +32,11 @@
 	.nav {
     border-right: 3px solid;
 		height: 100vh;
-		width: 60px;
+		width: 50px;
 		position: fixed;
 		left: 0;
 		top: 0;
-		padding-top: 59.5px;
+		padding-top: 40px;
 		z-index: 2;
 		border-right: 3px solid black;
 		text-overflow: ellipsis;
@@ -48,9 +48,9 @@
 		text-orientation: mixed;
 		text-align: center;
 		display: block;
-		padding: 15px;
+		padding: 10px;
 		width: 100%;
-		height: calc(25vh - 40px);
+		height: calc(22vh - 40px);
 	}
 
   .nav-item:not(:first-child) {

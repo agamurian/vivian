@@ -9,12 +9,13 @@ interface translation {
 }
 
 export const menu: Array<menuItem> = [
-	{ href: '/', en: 'About', ru: 'О галерее' },
-	{ href: '/artists', en: 'Artists', ru: 'Художники' },
-	{ href: '/market', en: 'Market', ru: 'Маркет' },
-	{ href: '/events', en: 'Exhibitions', ru: 'Выставки' }
+	{ href: '/', en: 'About', ru: 'Об авторе' },
+	{ href: '/projects', en: 'Projects', ru: 'Проекты' },
+	{ href: '/news', en: 'News', ru: 'Новости' },
+	{ href: '/articles', en: 'Publications', ru: 'Публикации' },
+	{ href: '/exhibitions', en: 'Exhibitions', ru: 'Выставки' }
 ];
 
 export const meta = {
-	title: { en: 'kerka gallery', ru: 'галерея керка' }
+	title: { en: 'Vivian Del Rio', ru: 'Вивиан Дель Рио' }
 };

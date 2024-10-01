@@ -10,7 +10,7 @@
   {#each data.eventsTranslations.data as et}
     {#if et.events_id == event.id}
       {#if et.languages_code == mapping[$lang]}
-	<a href={'/events/' + event.url}>
+	<a href={'/projects/' + event.url}>
 		<div class="event">
 			<div class="event-detail flex-1">
         <p class="pvh3"><b>{et.title}</b></p>

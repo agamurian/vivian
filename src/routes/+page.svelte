@@ -20,32 +20,24 @@ style='border-bottom: 3px solid { ($theme == "dark" ) ? $white : $black}; }'
   >
 	<div class="subsection p-10 pl-20 items-center flex">
 		<h4>
-			{content.gallery[$lang]}
 			<br />
-			{content.cont[$lang]}
+      website is under development
 			<br />
-			{content.art[$lang]}
 		</h4>
 	</div>
   <div class="subsection"
 style='border: { ($theme == "dark" ) ? $black : $white}; color: { ($theme == "dark" ) ? $white : $black }'
     >
-		<img class="bg-img" src="/blueprint-building.webp" alt="kerka building blueprint" />
 	</div>
 </section>
 <section class="main-section"
 style='border-bottom: 3px solid { ($theme == "dark" ) ? $white : $black}; }'
   >
 	<div class="subsection p-20 items-center flex">
-		<h1>Kerka</h1>
+		<h1>Vivian del Rio</h1>
 	</div>
 	<div class="subsection p-20 flex items-center align-middle">
 		<p>
-			{content.opened[$lang]}
-			<br />
-			---
-			<br />
-			{content.andnow[$lang]}
 		</p>
 	</div>
 </section>

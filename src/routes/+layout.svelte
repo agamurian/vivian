@@ -3,8 +3,8 @@
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import { page } from '$app/stores';
 	import { theme,white,black } from '$lib/stores';
-	$: title = $page.url.pathname.split('/').join(' - ') + ' - Kerka Gallery';
-	const description = 'Independent contemprorary art gallery';
+	$: title = $page.url.pathname.split('/').join(' + ') + ' + Vivian del Rio';
+	const description = 'Artist';
 </script>
 
 <svelte:head>
@@ -34,6 +34,6 @@
     transition: 0.3 ease;
   }
 	.content {
-		padding-left: 60px;
+		padding-left: 50px;
 	}
 </style>

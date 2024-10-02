@@ -68,19 +68,19 @@
 		align-items: center;
 		padding-left: 1em;
 		width: 100%;
-		height: calc(25vh - 40px);
-		border-bottom: 3px gray solid;
+		height: calc(20vh - 1em);
+		border-bottom: 2px gray solid;
 	}
 	.event-big {
 		width: 100%;
-		height: calc(50vh - 80px);
-		border-bottom: 3px gray solid;
+		height: calc(40vh - 2em);
+		border-bottom: 2px gray solid;
 	}
 	.event {
 		display: flex;
 		flex-direction: row;
-		height: calc(25vh - 40px);
-		border-bottom: 3px gray solid;
+		height: calc(20vh - 1em);
+		border-bottom: 2px gray solid;
     width: calc(100vw - 30px);
 	}
   .event:hover {
@@ -90,7 +90,7 @@
     display: flex;
 	}
 	.event-detail:not(:last-child) {
-		border-right: 3px dashed gray;
+		border-right: 2px dashed gray;
 	}
 	.image-fit {
 		max-width: 100%;

@@ -1,15 +1,19 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
 	import { lang } from '$lib/stores';
-	import { translationOf } from '$lib/content/api.js';
+	import { locale_mapping } from '$lib/content/api.js';
   export let data;
   let mapping = {'en':'en-US','ru':'ru-RU'}
+	import { menu } from '$lib/content/common';
 </script>
 
+<div class="header">
+	
+</div>
 {#each data.events.data as event}
   {#each data.eventsTranslations.data as et}
     {#if et.events_id == event.id}
-      {#if et.languages_code == mapping[$lang]}
+      {#if et.languages_code == locale_mapping[$lang]}
 	<a href={'/projects/' + event.url}>
 		<div class="event">
 			<div class="event-detail flex-1">
@@ -29,6 +33,10 @@
 {/each}
 
 <style>
+	.header {
+		background-color: red;
+		height: calc(20vh - 1em);
+	}
   a {
     margin: 0rem;
     display: flex;

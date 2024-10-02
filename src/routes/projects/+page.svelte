@@ -79,7 +79,7 @@
 	.event {
 		display: flex;
 		flex-direction: row;
-		height: calc(25vh - 40px);
+		height: calc(20vh - 1em);
 		border-bottom: 3px gray solid;
     width: calc(100vw - 30px);
 	}

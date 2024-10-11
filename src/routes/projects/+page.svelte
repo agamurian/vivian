@@ -1,14 +1,34 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	import { lang } from '$lib/stores';
+	import { lang, theme, white, black } from '$lib/stores';
 	import { locale_mapping } from '$lib/content/api.js';
   export let data;
   let mapping = {'en':'en-US','ru':'ru-RU'}
 	import { menu } from '$lib/content/common';
+	$: border_color = ($theme == 'dark')  ? $white : $black
+	$: background_color = ($theme == 'dark')  ? $black : $white
 </script>
 
 <div class="header">
-	
+	Проекты	
+</div>
+<div class="header">
+	Проекты	
+</div>
+<div class="header">
+	Проекты	
+</div>
+<div class="header">
+	Проекты	
+</div>
+<div class="header">
+	Проекты	
+</div>
+<div class="header">
+	Проекты	
+</div>
+<div class="header">
+	Проекты	
 </div>
 {#each data.events.data as event}
   {#each data.eventsTranslations.data as et}
@@ -35,7 +55,10 @@
 <style>
 	.header {
 		background-color: red;
-		height: calc(20vh - 1em);
+		height: calc(20vh - 1em + 4px);
+		border-bottom: 2px dashed;
+		padding: 0.5em;
+		display: block;
 	}
   a {
     margin: 0rem;

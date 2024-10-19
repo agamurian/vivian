@@ -18,7 +18,6 @@
       {#if et.languages_code == locale_mapping[$lang]}
 <div class="header">
 	<a href={'/projects/' + event.url}>
-	Проекты	
 			<div class="event-detail flex-1">
         <p class="pvh3"><b>{et.title}</b></p>
 			</div>
@@ -42,6 +41,7 @@
 		border-bottom: 2px dashed;
 		padding: 0.5em;
 		display: block;
+		overflow: hidden;
 	}
   a {
     margin: 0rem;

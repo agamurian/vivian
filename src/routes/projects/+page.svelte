@@ -54,7 +54,7 @@
 
 <style>
 	.header {
-		background-color: red;
+		background-color: antiquewhite;
 		height: calc(20vh - 1em + 4px);
 		border-bottom: 2px dashed;
 		padding: 0.5em;

@@ -12,24 +12,6 @@
 <div class="header">
 	Проекты	
 </div>
-<div class="header">
-	Проекты	
-</div>
-<div class="header">
-	Проекты	
-</div>
-<div class="header">
-	Проекты	
-</div>
-<div class="header">
-	Проекты	
-</div>
-<div class="header">
-	Проекты	
-</div>
-<div class="header">
-	Проекты	
-</div>
 {#each data.events.data as event}
   {#each data.eventsTranslations.data as et}
     {#if et.events_id == event.id}

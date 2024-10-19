@@ -16,8 +16,9 @@
   {#each data.eventsTranslations.data as et}
     {#if et.events_id == event.id}
       {#if et.languages_code == locale_mapping[$lang]}
+<div class="header">
 	<a href={'/projects/' + event.url}>
-		<div class="event">
+	Проекты	
 			<div class="event-detail flex-1">
         <p class="pvh3"><b>{et.title}</b></p>
 			</div>
@@ -27,8 +28,8 @@
 			<div class="event-detail">
 				<p class="pvh1">{formatDate(event.date)}</p>
 			</div>
-		</div>
   </a>
+</div>
     {/if}
     {/if}
 {/each}

@@ -101,7 +101,8 @@
     background: gray;
   }
 	.event-detail {
-    display: flex;
+		display: flex;
+		max-height: 100%;
 	}
 	.event-detail:not(:last-child) {
 		border-right: 3px dashed gray;

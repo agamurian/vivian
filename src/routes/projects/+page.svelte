@@ -73,43 +73,4 @@
     padding: 15px;
     padding-left: 20px;
 	}
-	.hvh4 {
-		font-size: 8vh;
-		font-weight: bold;
-	}
-	.string-header {
-		display: flex;
-		align-items: center;
-		padding-left: 1em;
-		width: 100%;
-		height: calc(25vh - 40px);
-		border-bottom: 3px gray solid;
-	}
-	.event-big {
-		width: 100%;
-		height: calc(50vh - 80px);
-		border-bottom: 3px gray solid;
-	}
-	.event {
-		display: flex;
-		flex-direction: row;
-		height: calc(20vh - 1em);
-		border-bottom: 3px gray solid;
-    width: calc(100vw - 30px);
-	}
-  .event:hover {
-    background: gray;
-  }
-	.event-detail {
-		display: flex;
-		max-height: 100%;
-	}
-	.event-detail:not(:last-child) {
-		border-right: 3px dashed gray;
-	}
-	.image-fit {
-		max-width: 100%;
-		max-height: 100%;
-		object-fit: cover;
-	}
 </style>

@@ -1,2 +1,2 @@
 #!/bin/bash
-npm run build &&  sudo rm -r /var/www/kerka && sudo cp -r ./build/ /var/www/kerka
+rm -r ./build && bun run build &&  sudo rm -r /var/www/vivian && sudo cp -r ./build /var/www/vivian

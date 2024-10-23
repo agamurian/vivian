@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { events, eventsTranslations } from '$lib/content/api.ts';
+import { projects, projectsTranslations } from '$lib/content/api.ts';
 /** @type {import('./$types').PageLoad} */
 
 export function load({ params }) {
@@ -11,7 +11,7 @@ export function load({ params }) {
 	}
 	return {
     slug: params.slug,
-		events: events.readByQuery({ limit: -1 }),
-		eventsTranslations: eventsTranslations.readByQuery({ limit: -1 })
+		projects: projects.readByQuery({ limit: -1 }),
+		projectsTranslations: projectsTranslations.readByQuery({ limit: -1 })
 	};
 }

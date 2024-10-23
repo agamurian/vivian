@@ -56,13 +56,13 @@
 </script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
-{#each data.events.data as event}
-  {#if event.url === url}
-    {#each data.eventsTranslations.data as et}
-      {#if et.events_id == event.id}
+{#each data.projects.data as project}
+  {#if project.url === url}
+    {#each data.projectsTranslations.data as et}
+      {#if et.projects_id == project.id}
         {#if et.languages_code == mapping[$lang]}
-          <div class="event">
-            <div class="event-detail flex-1">
+          <div class="project">
+            <div class="project-detail flex-1">
               <div class="title-wrapper">
                 <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
               </div>
@@ -70,11 +70,8 @@
             <div class="local-content" bind:this={contentDiv}>
               {@html marked(et.content)}
             </div>
-            <div class="event-detail">
-              <img class="main-image" src={getImageFromApi(event.main_image, innerWidth)} alt={et.title} />
-            </div>
-            <div class="event-detail">
-              <p class="date">{formatDate(event.date)}</p>
+            <div class="project-detail">
+              <img class="main-image" src={getImageFromApi(project.main_image, innerWidth)} alt={et.title} />
             </div>
           </div>
         {/if}

@@ -12,20 +12,17 @@
 <div class="header">
 	Проекты	
 </div>
-{#each data.events.data as event}
-  {#each data.eventsTranslations.data as et}
-    {#if et.events_id == event.id}
+{#each data.projects.data as project}
+  {#each data.projectsTranslations.data as et}
+    {#if et.projects_id == project.id}
       {#if et.languages_code == locale_mapping[$lang]}
 <div class="header">
-	<a href={'/projects/' + event.url}>
-			<div class="event-detail flex-1">
+	<a href={'/projects/' + project.url}>
+			<div class="project-detail flex-1">
         <p class="pvh3"><b>{et.title}</b></p>
 			</div>
-			<div class="event-detail flex-2">
+			<div class="project-detail flex-2">
         <p class="pvh2">{et.content}</p>
-			</div>
-			<div class="event-detail">
-				<p class="pvh1">{formatDate(event.date)}</p>
 			</div>
   </a>
 </div>

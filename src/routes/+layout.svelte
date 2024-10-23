@@ -3,7 +3,7 @@
 	import Navbar from '$lib/components/Navbar/Navbar.svelte';
 	import { page } from '$app/stores';
 	import { theme,white,black } from '$lib/stores';
-	$: title = $page.url.pathname.split('/').join(' + ') + ' + Vivian del Rio';
+  $: title = $page.url.pathname ? $page.url.pathname.split('/').join(' + ') + ' + Vivian del Rio' :  'Vivian del Rio' ;
 	const description = 'Artist';
 </script>
 

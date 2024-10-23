@@ -1,5 +1,6 @@
 import { writable } from 'svelte/store';
 
+export const contentChanged = writable<boolean>(false);
 export const hideNav = writable<boolean>(false);
 type themeType = 'light' | 'dark';
 export const theme = writable<themeType>('light');

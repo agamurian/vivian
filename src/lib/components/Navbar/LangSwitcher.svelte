@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { lang } from '$lib/stores';
+	import { lang, contentChanged } from '$lib/stores';
 	const changeLang = () => {
 		if ($lang === 'en') {
 			lang.set('ru');
 		} else if ($lang === 'ru') {
 			lang.set('en');
 		}
+		contentChanged.set(false);
+		contentChanged.set(true);
 	};
 </script>
 

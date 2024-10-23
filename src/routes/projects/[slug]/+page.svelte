@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte';
   import { marked } from 'marked';
-  import { lang } from '$lib/stores';
+  import { lang,contentChanged } from '$lib/stores';
   import { formatDate, getImageFromApi } from '$lib/utils';
 
   /** @type {import('./$types').PageData} */
@@ -26,23 +26,33 @@
     });
   }
 
+  function onContentChanged() {
 
-  onMount(() => {
-    if (contentDiv) {
-      setStyles();
+    setStyles();
+    // fade in
       setTimeout(() => {
       titleElement.style.opacity = '1.0';
     }, 0);
       setTimeout(() => {
       contentDiv.style.opacity = '1.0';
     }, 50);
-    }
-    console.log("on mount");
+
+  }
+
+  let mounted = false
+  onMount(() => {
+    mounted = true;
   });
 	$: outerWidth = 0
 	$: innerWidth = 0
 	$: outerHeight = 0
 	$: innerHeight = 0
+  $: {
+    $contentChanged;
+    if (contentDiv && mounted) {
+      onContentChanged();
+    }
+  }
 </script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />

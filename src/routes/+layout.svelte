@@ -35,6 +35,7 @@
     box-sizing: border-box;
   }
 	.content {
+    transition: 0.3 ease;
 margin-top: -1.5px;
 		padding-left: 2em;
 	}

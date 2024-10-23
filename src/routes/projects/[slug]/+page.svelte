@@ -23,7 +23,9 @@
     });
     const ps = contentDiv.querySelectorAll('.local-content p');
     ps.forEach(p => {
-      p.style.margin = '2em';
+      p.style.margin = '1em';
+      p.style.marginTop = '2em';
+      p.style.marginBottom = '2em';
     });
   }
 
@@ -92,7 +94,7 @@
   .local-content {
     opacity: 0.0;
     transition: 0.4s ease-out;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 2em;
   }
   .title {
@@ -112,7 +114,7 @@
     font-weight: 300;
   }
   .title-wrapper {
-    height: calc(20vh - 1em + 4.5px);
+    height: calc(20vh - 1em + 4px);
     border-bottom: 3px dashed gray;
     padding: 1em;
     display: flex;

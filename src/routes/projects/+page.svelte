@@ -12,9 +12,11 @@
 
 	{#each menu as item}
       {#if item.href == $page.route.id}
+              <div class="title-wrapper">
 				<p class="title">
 					{item[$lang]}
 				</p>
+              </div>
       {/if}
 	{/each}
 {#each data.projects.data as project}
@@ -38,7 +40,6 @@
 
 <style>
 	.header {
-		background-color: antiquewhite;
 		height: calc(20vh - 1em + 4px);
 		border-bottom: 2px dashed;
 		padding: 0.5em;
@@ -75,4 +76,17 @@
     padding: 15px;
     padding-left: 20px;
 	}
+  .title {
+    opacity: 1.0;
+    transition: 0.2s ease-out;
+    padding-left: 1em;
+    font-size: calc(2vw + 1.5em);
+  }
+  .title-wrapper {
+    height: calc(20vh - 1em + 4px);
+    border-bottom: 3px dashed gray;
+    padding: 1em;
+    display: flex;
+    align-items: flex-end;
+  }
 </style>

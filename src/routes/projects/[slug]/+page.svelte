@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import { marked } from 'marked';
   import { lang,contentChanged } from '$lib/stores';
-  import { formatDate, getImageFromApi } from '$lib/utils';
+  import { getImageFromApi } from '$lib/utils';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -11,6 +11,8 @@
   let mapping = { 'en': 'en-US', 'ru': 'ru-RU' };
   let contentDiv; // Declare a variable to bind
   let titleElement; // Declare a variable to bind
+  let descriptionElement; // Declare a variable to bind
+  let mainImageElement; // Declare a variable to bind
 
   function setStyles() {
     const images = contentDiv.querySelectorAll('.local-content img');
@@ -18,11 +20,10 @@
       img.style.width = '100%';
       img.style.margin = '0';
       img.style.height = 'auto';
-      img.style.border = '2px solid #ccc';
     });
     const ps = contentDiv.querySelectorAll('.local-content p');
     ps.forEach(p => {
-      p.style.margin = '1em';
+      p.style.margin = '2em';
     });
   }
 
@@ -34,8 +35,14 @@
       titleElement.style.opacity = '1.0';
     }, 0);
       setTimeout(() => {
-      contentDiv.style.opacity = '1.0';
+      descriptionElement.style.opacity = '1.0';
     }, 50);
+      setTimeout(() => {
+      mainImageElement.style.opacity = '1.0';
+    }, 100);
+      setTimeout(() => {
+      contentDiv.style.opacity = '1.0';
+    }, 200);
 
   }
 
@@ -62,16 +69,17 @@
       {#if et.projects_id == project.id}
         {#if et.languages_code == mapping[$lang]}
           <div class="project">
-            <div class="project-detail flex-1">
+            <div class="flex-1">
               <div class="title-wrapper">
                 <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
               </div>
             </div>
+              <div class="description-wrapper">
+                <p class="description" bind:this={descriptionElement}>{et.description}</p>
+              </div>
+              <img class="main-image" bind:this={mainImageElement} src={getImageFromApi(project.main_image, innerWidth)} alt={et.title} />
             <div class="local-content" bind:this={contentDiv}>
               {@html marked(et.content)}
-            </div>
-            <div class="project-detail">
-              <img class="main-image" src={getImageFromApi(project.main_image, innerWidth)} alt={et.title} />
             </div>
           </div>
         {/if}
@@ -91,7 +99,17 @@
     opacity: 0.0;
     transition: 0.2s ease-out;
     padding-left: 1em;
-    font-size: calc(2vw + 1em);
+    font-size: calc(2vw + 1.5em);
+  }
+  .description {
+    opacity: 0.0;
+    transition: 0.2s ease-out;
+    margin: 4em;
+    margin-left: calc(10vw + 4em);
+    max-width: 42em;
+    font-size: 0.75em;
+    line-height: 1.5;
+    font-weight: 300;
   }
   .title-wrapper {
     height: calc(20vh - 1em + 4.5px);
@@ -101,6 +119,8 @@
     align-items: flex-end;
   }
   .main-image {
+    opacity: 0.0;
+    transition: 0.2s ease-out;
     width: 100%;
     object-fit: cover;
   }

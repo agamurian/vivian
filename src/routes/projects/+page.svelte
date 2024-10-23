@@ -2,16 +2,21 @@
 	import { formatDate } from '$lib/utils';
 	import { lang, theme, white, black } from '$lib/stores';
 	import { locale_mapping } from '$lib/content/api.js';
+	import { page } from '$app/stores';
+	import { menu } from '$lib/content/common';
   export let data;
   let mapping = {'en':'en-US','ru':'ru-RU'}
-	import { menu } from '$lib/content/common';
 	$: border_color = ($theme == 'dark')  ? $white : $black
 	$: background_color = ($theme == 'dark')  ? $black : $white
 </script>
 
-<div class="header">
-	Проекты	
-</div>
+	{#each menu as item}
+      {#if item.href == $page.route.id}
+				<p class="title">
+					{item[$lang]}
+				</p>
+      {/if}
+	{/each}
 {#each data.projects.data as project}
   {#each data.projectsTranslations.data as et}
     {#if et.projects_id == project.id}

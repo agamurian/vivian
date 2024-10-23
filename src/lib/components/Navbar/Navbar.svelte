@@ -5,7 +5,7 @@
   import ThemeSwitcher from './ThemeSwitcher.svelte';
 	import VerticalNav from './VerticalNav.svelte';
   let lastScrollTop = 0;
-  // TODO: last slash
+  // last slash removal:
 	$: title = $page.url.pathname.split('/').slice(0,-1).join('/');
   let hidebale = false
 </script>

@@ -42,6 +42,7 @@
 		z-index: 2;
 		border-right: 4px solid;
 		text-overflow: ellipsis;
+  transition: 0.4s ease-out;
 	}
 	.nav-item {
     border-top: 2px solid;

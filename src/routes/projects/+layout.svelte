@@ -4,7 +4,7 @@
 </script>
 
 <div class="content"
-style="color: { ($theme == 'dark' ) ? $white : $black };"
+  style="color: { ($theme == 'dark' ) ? $white : $black }; transition: 0.2s ease;"
   >
 	<slot />
 </div>

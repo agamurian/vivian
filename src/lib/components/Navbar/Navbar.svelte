@@ -75,7 +75,7 @@
     max-width: 50vw;
     flex-wrap: nowrap;
   text-overflow: ellipsis;
-  transition: 1s ease;
+  transition: 0.4s ease-out;
   font-size: 0.75em;
   font-weight: 600;
   background-color: #0440;
@@ -91,7 +91,7 @@
   .localtitle{
     max-width: 50vw;
   text-overflow: ellipsis;
-  transition: 1s ease;
+  transition: 0.4s ease-out;
   font-size: 1.0rem;
   font-weight: 600;
   padding: 0.25em;

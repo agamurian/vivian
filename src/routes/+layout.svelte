@@ -32,6 +32,7 @@
 <style>
   @global(*,body){
     transition: 0.3 ease;
+    box-sizing: border-box;
   }
 	.content {
 margin-top: -1.5px;

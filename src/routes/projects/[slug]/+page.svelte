@@ -10,8 +10,9 @@
   $: url = data.slug;
   let mapping = { 'en': 'en-US', 'ru': 'ru-RU' };
   let contentDiv; // Declare a variable to bind
+  let titleElement; // Declare a variable to bind
 
-  function setImageStyles() {
+  function setStyles() {
     const images = contentDiv.querySelectorAll('.local-content img');
     images.forEach(img => {
       img.style.width = '100%';
@@ -19,14 +20,22 @@
       img.style.height = 'auto';
       img.style.border = '2px solid #ccc';
     });
+    const ps = contentDiv.querySelectorAll('.local-content p');
+    ps.forEach(p => {
+      p.style.margin = '1em';
+    });
   }
+
 
   onMount(() => {
     if (contentDiv) {
-      setImageStyles();
+      setStyles();
+      setTimeout(() => {
+      titleElement.style.opacity = '1.0';
+    }, 0);
       setTimeout(() => {
       contentDiv.style.opacity = '1.0';
-    }, 0);
+    }, 50);
     }
     console.log("on mount");
   });
@@ -45,7 +54,7 @@
           <div class="event">
             <div class="event-detail flex-1">
               <div class="title-wrapper">
-                <p class="title"><b>{et.title}</b></p>
+                <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
               </div>
             </div>
             <div class="local-content" bind:this={contentDiv}>
@@ -67,14 +76,13 @@
 <style>
   .local-content {
     opacity: 0.0;
-    transition: 0.2s ease-out;
+    transition: 0.4s ease-out;
     font-size: 1.5em;
     padding: 2em;
   }
-  :global(img) {
-    transition: 0.2s ease;
-  }
   .title {
+    opacity: 0.0;
+    transition: 0.2s ease-out;
     padding-left: 1em;
     font-size: calc(2vw + 1em);
   }

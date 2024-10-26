@@ -34,7 +34,8 @@
     box-sizing: border-box;
   }
 	.content {
-margin-top: -1.5px;
-		padding-left: 2em;
+    margin-top: 1.5px;
+		padding-left: calc(2em + 4px);
+    overflow-x: hidden;
 	}
 </style>

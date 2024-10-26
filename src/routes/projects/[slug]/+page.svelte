@@ -1,8 +1,6 @@
 <script lang="ts">
-  import { onMount, onDestroy } from 'svelte';
-  import { marked } from 'marked';
+  import { onMount } from 'svelte';
   import { lang,contentChanged } from '$lib/stores';
-  import { getImageFromApi } from '$lib/utils';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -12,20 +10,35 @@
   let contentDiv; // Declare a variable to bind
   let titleElement; // Declare a variable to bind
   let descriptionElement; // Declare a variable to bind
-  let mainImageElement; // Declare a variable to bind
 
+  // because content is loaded synamically
   function setStyles() {
-    const images = contentDiv.querySelectorAll('.local-content img');
-    images.forEach(img => {
-      img.style.width = '100%';
-      img.style.margin = '0';
-      img.style.height = 'auto';
-    });
+    // all content is inside th p
     const ps = contentDiv.querySelectorAll('.local-content p');
     ps.forEach(p => {
-      p.style.margin = '1em';
-      p.style.marginTop = '2em';
-      p.style.marginBottom = '2em';
+      p.style.fontSize = "0.75em";
+      p.style.lineHeight = "1.5";
+      p.style.fontWeight = "300";
+      p.style.margin = "1em"
+      });
+    const quote_ps = contentDiv.querySelectorAll('.local-content blockquote > p');
+    quote_ps.forEach(p => {
+      p.style.margin = "4em";
+      p.style.marginLeft = "calc(10vw + 2em)";
+      p.style.maxWidth = "45em"; //-> tag in content
+      });
+    // in content images are inside ps. cancell out the margins
+    const images = contentDiv.querySelectorAll('.local-content p > img');
+    images.forEach(img => {
+      img.style.width = "100%";
+      img.style.marginTop = "4em";
+    });
+    const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
+    big_images.forEach(img => {
+      img.style.width = "calc(100vw - 2em)";
+      img.style.maxWidth = "100vw";
+      img.style.marginLeft = "-4em";
+      img.style.marginBottom = "1em";
     });
   }
 
@@ -37,14 +50,8 @@
       titleElement.style.opacity = '1.0';
     }, 0);
       setTimeout(() => {
-      descriptionElement.style.opacity = '1.0';
-    }, 50);
-      setTimeout(() => {
-      mainImageElement.style.opacity = '1.0';
-    }, 100);
-      setTimeout(() => {
       contentDiv.style.opacity = '1.0';
-    }, 200);
+    }, 50);
 
   }
 
@@ -76,12 +83,8 @@
                 <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
               </div>
             </div>
-              <div class="description-wrapper">
-                <p class="description" bind:this={descriptionElement}>{et.description}</p>
-              </div>
-              <img class="main-image" bind:this={mainImageElement} src={getImageFromApi(project.main_image, innerWidth)} alt={et.title} />
             <div class="local-content" bind:this={contentDiv}>
-              {@html marked(et.content)}
+              {@html et.content}
             </div>
           </div>
         {/if}
@@ -96,6 +99,7 @@
     transition: 0.4s ease-out;
     font-size: 1em;
     padding: 2em;
+    padding-top: 0;
   }
   .title {
     opacity: 0.0;
@@ -103,28 +107,12 @@
     padding-left: 1em;
     font-size: calc(2vw + 1.5em);
   }
-  .description {
-    opacity: 0.0;
-    transition: 0.2s ease-out;
-    margin: 4em;
-    margin-left: calc(10vw + 4em);
-    max-width: 42em;
-    font-size: 0.75em;
-    line-height: 1.5;
-    font-weight: 300;
-  }
   .title-wrapper {
-    height: calc(20vh - 1em + 4px);
-    border-bottom: 3px dashed gray;
+    height: calc(20vh - 0.5em);
+    border-bottom: 2px dashed gray;
     padding: 1em;
     display: flex;
     align-items: flex-end;
-  }
-  .main-image {
-    opacity: 0.0;
-    transition: 0.2s ease-out;
-    width: 100%;
-    object-fit: cover;
   }
 </style>
 

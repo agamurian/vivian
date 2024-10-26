@@ -54,10 +54,4 @@ style='border-bottom: 3px solid { ($theme == "dark" ) ? $white : $black}; }'
 	.subsection:not(:last-child) {
 		border-right: 3px dashed;
 	}
-
-	.bg-img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 </style>

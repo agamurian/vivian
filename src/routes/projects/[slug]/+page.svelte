@@ -35,7 +35,7 @@
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
-      img.style.width = "calc(100vw - 2em)";
+      img.style.width = "calc(100vw - 3em + 4px)";
       img.style.maxWidth = "100vw";
       img.style.marginLeft = "-4em";
       img.style.marginBottom = "1em";
@@ -94,6 +94,9 @@
 {/each}
 
 <style>
+  .project {
+    overflow-x: hidden;
+  }
   .local-content {
     opacity: 0.0;
     transition: 0.4s ease-out;

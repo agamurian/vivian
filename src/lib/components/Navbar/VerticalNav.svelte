@@ -12,7 +12,9 @@
 		 "
   >
 	{#each menu as item}
-    <a  href={item.href} class="nav-item">
+    <a  href={item.href} class="nav-item" style="
+     background-color: {background_color};
+      ">
 				<span >
 					{item[$lang]}
 				</span>
@@ -30,7 +32,7 @@
 		position: fixed;
 		left: 0;
 		top: 0;
-		padding-top: 2em;
+		padding-top: calc(2em + 2px);
 		z-index: 2;
 		border-right: 4px solid;
 		text-overflow: ellipsis;

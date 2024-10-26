@@ -19,14 +19,9 @@
 >
 
 	<div class="flex flex-grow flex-nowrap inlinish">
-		<section style="flex: 1" />
-		<section class="nav-item" style="width: calc(100vw - 6em)">
-      <div style="width: calc(100vw - 10em);">
         <span class='nav_title' style='color: { ($theme == 'dark' ) ? $white : $black };'>
           {title}
         </span>
-      </div>
-		</section>
 	</div>
 	<div class="flex flex-grow">
 		<section style="flex: 1" />
@@ -46,6 +41,7 @@
   transition: 0.4s ease-out;
   font-weight: 400;
   font-size: 1em;
+  margin-left: 3em;
   }
   .inlinish{
     display: flex;

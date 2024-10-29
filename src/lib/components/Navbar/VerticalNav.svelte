@@ -52,7 +52,8 @@
 		padding: calc(0.5em + 2px);
 		width: 100%;
 		height: calc(20vh - 0.5em);
-		font-size: 0.75em;
+		font-size: 0.8em;
+    line-height: 1;
 		font-weight: 300;
     overflow: hidden;
     display:block;

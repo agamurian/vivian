@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { theme, white, black, lang, hideNav,localtitle } from '$lib/stores';
 	import LangSwitcher from './LangSwitcher.svelte';
   import ThemeSwitcher from './ThemeSwitcher.svelte';
@@ -40,8 +39,8 @@
   display: flex;
   transition: 0.4s ease-out;
   font-weight: 400;
-  font-size: 1em;
-  margin-left: 3em;
+  font-size: 0.8em;
+  margin-left: 4em;
   }
   .inlinish{
     display: flex;

@@ -32,6 +32,7 @@
     // in content images are inside ps. cancell out the margins
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
+      img.style.pointerEvents = "none"; // secure from download
       img.style.width = "100%";
       img.style.marginTop = "3em";
       img.style.objectFit = "scale-down";
@@ -40,10 +41,29 @@
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
+      img.style.pointerEvents = "none"; // secure from download
       img.style.width = "calc(100vw - 3em + 4px)";
       img.style.maxWidth = "100vw";
       img.style.marginLeft = "-4em";
       img.style.marginBottom = "1em";
+      img.alt = "Vivian Del Rio"
+    });
+    const paired_images_wrappers = contentDiv.querySelectorAll('.local-content p em');
+    paired_images_wrappers.forEach(el => {
+      el.style.display = "flex";
+      el.style.gap = "1em";
+      el.style.padding = "2em";
+    });
+    const paired_images = contentDiv.querySelectorAll('.local-content p em > img');
+    paired_images.forEach(img => {
+      img.style.pointerEvents = "none"; // secure from download
+      img.style.width = "100%";
+      img.style.height = "auto";
+      img.style.marginTop = "1em";
+      img.style.maxWidth = "calc(100vw - 10em)";
+      img.style.maxHeight = "calc(100vh - 5em)";
+      img.style.display = "block";
+      img.style.objectFit = "scale-down";
     });
   }
 

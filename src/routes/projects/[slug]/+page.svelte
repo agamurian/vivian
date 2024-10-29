@@ -45,7 +45,7 @@
     // in content images are inside ps. cancell out the margins
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
-      //img.style.pointerEvents = "none"; // secure from download
+      img.style.pointerEvents = "none"; // secure from download
       img.src = getSizedImg(img.src, innerWidth);
       img.style.width = "100%";
       img.style.marginTop = "3em";
@@ -55,7 +55,7 @@
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
-      //img.style.pointerEvents = "none"; // secure from download
+      img.style.pointerEvents = "none"; // secure from download
       img.src = getSizedImg(img.src, innerWidth);
       img.style.width = "calc(100vw - 3em + 4px)";
       img.style.maxWidth = "100vw";
@@ -75,7 +75,7 @@
     });
     const paired_images = contentDiv.querySelectorAll('.local-content p em > img');
     paired_images.forEach(img => {
-      //img.style.pointerEvents = "none"; // secure from download
+      img.style.pointerEvents = "none"; // secure from download
       if (img)
       img.src = getSizedImg(img.src, innerWidth);
       img.style.width = "100%";
@@ -137,9 +137,7 @@
             </div>
             <div class="local-content" bind:this={contentDiv}>
               {#key mounted}
-                {#key innerWidth}
                   {@html et.content}
-                {/key}
               {/key}
             </div>
           </div>

@@ -30,7 +30,9 @@
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
       img.style.width = "100%";
-      img.style.marginTop = "4em";
+      img.style.marginTop = "3em";
+      img.style.objectFit = "scale-down";
+      img.style.padding = "2em";
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {

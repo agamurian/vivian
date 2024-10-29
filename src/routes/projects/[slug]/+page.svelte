@@ -13,7 +13,20 @@
 	$: border_color = ($theme == 'dark')  ? $white : $black
 	$: background_color = ($theme == 'dark')  ? $black : $white
 
-  // because content is loaded synamically
+	$: outerWidth = 2000
+	$: innerWidth = 2000
+	$: outerHeight = 2000
+	$: innerHeight = 2000
+
+  const maxImgWidth = 2000
+
+  function getSizedImg(src,width){
+    const srcNoQuery = src.split('?')[0]
+    const newSrc = srcNoQuery + "?width=" + Math.min(width,maxImgWidth)
+    return newSrc 
+  }
+
+  // because content is loaded dynamically
   function setStyles() {
     // all content is inside th p
     const ps = contentDiv.querySelectorAll('.local-content p');
@@ -32,7 +45,8 @@
     // in content images are inside ps. cancell out the margins
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
-      img.style.pointerEvents = "none"; // secure from download
+      //img.style.pointerEvents = "none"; // secure from download
+      img.src = getSizedImg(img.src, innerWidth);
       img.style.width = "100%";
       img.style.marginTop = "3em";
       img.style.objectFit = "scale-down";
@@ -41,7 +55,8 @@
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
-      img.style.pointerEvents = "none"; // secure from download
+      //img.style.pointerEvents = "none"; // secure from download
+      img.src = getSizedImg(img.src, innerWidth);
       img.style.width = "calc(100vw - 3em + 4px)";
       img.style.maxWidth = "100vw";
       img.style.marginLeft = "-4em";
@@ -50,13 +65,19 @@
     });
     const paired_images_wrappers = contentDiv.querySelectorAll('.local-content p em');
     paired_images_wrappers.forEach(el => {
-      el.style.display = "flex";
-      el.style.gap = "1em";
+      if(innerWidth > 600){
+        el.style.display = "flex";
+      }else{
+        el.style.display = "block";
+      }
+      el.style.gap = "2em";
       el.style.padding = "2em";
     });
     const paired_images = contentDiv.querySelectorAll('.local-content p em > img');
     paired_images.forEach(img => {
-      img.style.pointerEvents = "none"; // secure from download
+      //img.style.pointerEvents = "none"; // secure from download
+      if (img)
+      img.src = getSizedImg(img.src, innerWidth);
       img.style.width = "100%";
       img.style.height = "auto";
       img.style.marginTop = "1em";
@@ -84,16 +105,20 @@
   onMount(() => {
     mounted = true;
   });
-	$: outerWidth = 0
-	$: innerWidth = 0
-	$: outerHeight = 0
-	$: innerHeight = 0
   $: {
     $contentChanged;
     if (contentDiv && mounted) {
       onContentChanged();
     }
   }
+
+  $: {
+    innerWidth;
+    if (contentDiv && mounted) {
+      onContentChanged();
+    }
+  }
+
 </script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
@@ -112,7 +137,9 @@
             </div>
             <div class="local-content" bind:this={contentDiv}>
               {#key mounted}
-              {@html et.content}
+                {#key innerWidth}
+                  {@html et.content}
+                {/key}
               {/key}
             </div>
           </div>
@@ -128,7 +155,7 @@
   }
   .local-content {
     opacity: 0.0;
-    transition: 0.4s ease-out;
+    transition: 2s ease-out;
     font-size: 1em;
     padding: 2em;
     padding-top: 0;
@@ -136,7 +163,7 @@
   }
   .title {
     opacity: 0.0;
-    transition: 0.2s ease-out;
+    transition: 1s ease-out;
     padding-left: 1em;
     font-size: calc(2vw + 1.5em);
   }

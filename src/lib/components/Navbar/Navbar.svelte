@@ -56,9 +56,9 @@
     font-size: 0.75em;
 	}
 	.navbar {
+		z-index: 2;
     height: calc(2em + 2px);
     flex-wrap: nowrap;
-		z-index: 1;
 		font-size: 1em;
 		top: 0;
 		transition: 0.4s ease-out;

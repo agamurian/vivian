@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { lang,contentChanged } from '$lib/stores';
+  import { lang,contentChanged,theme,black,white } from '$lib/stores';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -9,6 +9,9 @@
   let mapping = { 'en': 'en-US', 'ru': 'ru-RU' };
   let contentDiv; // Declare a variable to bind
   let titleElement; // Declare a variable to bind
+
+	$: border_color = ($theme == 'dark')  ? $white : $black
+	$: background_color = ($theme == 'dark')  ? $black : $white
 
   // because content is loaded synamically
   function setStyles() {
@@ -33,6 +36,7 @@
       img.style.marginTop = "3em";
       img.style.objectFit = "scale-down";
       img.style.padding = "2em";
+      img.style.maxHeight = "calc(100vh - 5em)";
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
@@ -80,7 +84,9 @@
         {#if et.languages_code == mapping[$lang]}
           <div class="project">
             <div class="flex-1">
-              <div class="title-wrapper">
+              <div class="title-wrapper"
+          style="border-color: {border_color}"
+                >
                 <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
               </div>
             </div>
@@ -106,6 +112,7 @@
     font-size: 1em;
     padding: 2em;
     padding-top: 0;
+    overflow-x: hidden;
   }
   .title {
     opacity: 0.0;

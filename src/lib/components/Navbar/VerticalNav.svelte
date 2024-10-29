@@ -12,9 +12,12 @@
 		 "
   >
 	{#each menu as item}
-    <a  href={item.href} class="nav-item" style="
+    <a  href={item.href} 
+      style="
      background-color: {background_color};
-      ">
+     "
+    class="nav-item"
+     >
 				<span >
 					{item[$lang]}
 				</span>

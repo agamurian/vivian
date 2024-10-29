@@ -9,7 +9,6 @@
   let mapping = { 'en': 'en-US', 'ru': 'ru-RU' };
   let contentDiv; // Declare a variable to bind
   let titleElement; // Declare a variable to bind
-  let descriptionElement; // Declare a variable to bind
 
   // because content is loaded synamically
   function setStyles() {
@@ -84,7 +83,9 @@
               </div>
             </div>
             <div class="local-content" bind:this={contentDiv}>
+              {#key mounted}
               {@html et.content}
+              {/key}
             </div>
           </div>
         {/if}

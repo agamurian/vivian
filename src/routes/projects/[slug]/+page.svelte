@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { lang,contentChanged,theme,black,white } from '$lib/stores';
+  import { debounce } from '$lib/utils';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -17,6 +18,7 @@
 	$: innerWidth = 2000
 	$: outerHeight = 2000
 	$: innerHeight = 2000
+  let sizeReallyChanged = 2000
 
   const maxImgWidth = 2000
 
@@ -46,17 +48,16 @@
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
-      img.src = getSizedImg(img.src, innerWidth);
+      img.src = getSizedImg(img.src, sizeReallyChanged);
       img.style.width = "100%";
       img.style.marginTop = "3em";
       img.style.objectFit = "scale-down";
       img.style.padding = "2em";
-      img.style.maxHeight = "calc(100vh - 5em)";
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
-      img.src = getSizedImg(img.src, innerWidth);
+      img.src = getSizedImg(img.src, sizeReallyChanged);
       img.style.width = "calc(100vw - 3em + 4px)";
       img.style.maxWidth = "100vw";
       img.style.marginLeft = "-4em";
@@ -77,12 +78,11 @@
     paired_images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
       if (img)
-      img.src = getSizedImg(img.src, innerWidth);
+      img.src = getSizedImg(img.src, sizeReallyChanged);
       img.style.width = "100%";
       img.style.height = "auto";
       img.style.marginTop = "1em";
       img.style.maxWidth = "calc(100vw - 10em)";
-      img.style.maxHeight = "calc(100vh - 5em)";
       img.style.display = "block";
       img.style.objectFit = "scale-down";
     });
@@ -94,10 +94,14 @@
     // fade in
       setTimeout(() => {
       titleElement.style.opacity = '1.0';
-    }, 0);
-      setTimeout(() => {
-      contentDiv.style.opacity = '1.0';
+    
+        setTimeout(() => {
+        contentDiv.style.opacity = '1.0';
+
+      }, 100);
+
     }, 50);
+
 
   }
 
@@ -112,12 +116,12 @@
     }
   }
 
-  $: {
-    innerWidth;
-    if (contentDiv && mounted) {
-      onContentChanged();
-    }
-  }
+  const handleResize = debounce((width: number) => {
+    sizeReallyChanged = width;
+    console.log("Debounced width:", sizeReallyChanged); // Use this value in your app
+  }, 200);
+
+  $: handleResize(innerWidth);
 
 </script>
 
@@ -137,7 +141,9 @@
             </div>
             <div class="local-content" bind:this={contentDiv}>
               {#key mounted}
+              {#key sizeReallyChanged}
                   {@html et.content}
+              {/key}
               {/key}
             </div>
           </div>

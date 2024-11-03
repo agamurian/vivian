@@ -48,7 +48,6 @@
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
-      img.src = getSizedImg(img.src, sizeReallyChanged);
       img.style.width = "100%";
       img.style.marginTop = "3em";
       img.style.objectFit = "scale-down";
@@ -57,7 +56,6 @@
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
-      img.src = getSizedImg(img.src, sizeReallyChanged);
       img.style.width = "calc(100vw - 3em + 4px)";
       img.style.maxWidth = "100vw";
       img.style.marginLeft = "-4em";
@@ -71,14 +69,13 @@
       }else{
         el.style.display = "block";
       }
-      el.style.gap = "2em";
+      el.style.gap = "4em";
       el.style.padding = "2em";
     });
     const paired_images = contentDiv.querySelectorAll('.local-content p em > img');
     paired_images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
       if (img)
-      img.src = getSizedImg(img.src, sizeReallyChanged);
       img.style.width = "100%";
       img.style.height = "auto";
       img.style.marginTop = "1em";
@@ -110,7 +107,6 @@
     mounted = true;
   });
   $: {
-    $contentChanged;
     if (contentDiv && mounted) {
       onContentChanged();
     }
@@ -158,12 +154,14 @@
     overflow-x: hidden;
   }
   .local-content {
+    max-width: 1200px;
     opacity: 0.0;
     transition: 2s ease-out;
     font-size: 1em;
     padding: 2em;
     padding-top: 0;
     overflow-x: hidden;
+    margin: auto;
   }
   .title {
     opacity: 0.0;

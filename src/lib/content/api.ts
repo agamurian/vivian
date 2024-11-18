@@ -16,9 +16,17 @@ export function translationOf(item, translations, lang): string {
 }
 
 // Exporting itemss
-export const events = directus.items('events');
-export const eventsTranslations = directus.items('events_translations');
-export const projects = directus.items('projects');
-export const projectsTranslations = directus.items('projects_translations');
+export const exhibitions = directus.items('exhibitions');
+export const exhibitionsTranslations = directus.items('exhibitions_translations');
+
+export const mainPage = directus.items('main_page');
+export const mainPageTranslations = directus.items('main_page_translations');
+
 export const news = directus.items('news');
 export const newsTranslations = directus.items('news_translations');
+
+export const projects = directus.items('projects');
+export const projectsTranslations = directus.items('projects_translations');
+
+export const publications = directus.items('publications');
+export const publicationsTranslations = directus.items('publications_translations');

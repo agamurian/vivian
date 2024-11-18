@@ -43,18 +43,18 @@
     gap: 0px;
 	}
 	.nav-item {
+    text-rendering: geometricPrecision;
     border-bottom: 2px solid ;
 		white-space: nowrap;
 		writing-mode: vertical-rl;
 		transform: rotate(180deg);
-		text-orientation: mixed;
 		text-align: center;
 		padding: calc(0.5em + 2px);
 		width: 100%;
 		height: calc(20vh - 0.5em);
 		font-size: 0.8em;
     line-height: 1;
-		font-weight: 300;
+		font-weight: 400;
     overflow: hidden;
     display:block;
 	}

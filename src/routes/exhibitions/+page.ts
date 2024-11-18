@@ -1,8 +1,8 @@
-import { events, eventsTranslations } from '$lib/content/api.ts';
+import { exhibitions, exhibitionsTranslations } from '$lib/content/api.ts';
 
 export function load({ params }) {
 	return {
-		events: events.readByQuery({ limit: -1 }),
-		eventsTranslations: eventsTranslations.readByQuery({ limit: -1 })
+		exhibitions: exhibitions.readByQuery({ limit: -1 }),
+		exhibitionsTranslations: exhibitionsTranslations.readByQuery({ limit: -1 })
 	};
 }

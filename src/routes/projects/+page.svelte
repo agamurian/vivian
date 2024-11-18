@@ -7,7 +7,6 @@
   export let data;
 
   const title = 'Vivian Del Rio'
-  let mapping = {'en':'en-US','ru':'ru-RU'}
 	$: border_color = ($theme == 'dark')  ? $white : $black
 	$: background_color = ($theme == 'dark')  ? $black : $white
 </script>
@@ -20,20 +19,24 @@
           background-color: {background_color};
           "
           >
+          <div class="centered-h content-container large">
 				  <p class="title">
 					  {item[$lang]}
-				  </p>
+          </p>
+          </div>
         </div>
       {/if}
-	{/each}
-  <div class="projects flex flex-col gap-4">
+  {/each}
+  <div class = "centered-h content-container medium"
+    >
+  <div class="flex flex-col gap-16 py-16 px-0 md:px-16">
 {#each data.projects.data as project}
   {#each data.projectsTranslations.data as et}
     {#if et.projects_id == project.id}
       {#if et.languages_code == locale_mapping[$lang]}
 	<a href={'/projects/' + project.url}>
 
-  <div class="flex flex-col md:flex-row gap-2 md:gap-4 p-2 md:p-4">
+  <div class="flex flex-col md:flex-row gap-4 md:gap-8 ">
     <!-- Left Column (Image) -->
     <div class="w-full md:w-1/2">
         <img src={getImageFromApi(project.main_image)} alt={title[$lang] + ' ' + et.title + ' ' + et.description } class="w-full h-auto object-conver"/>
@@ -58,6 +61,7 @@
 {/each}
 {/each}
   </div>
+  </div>
 
 <style>
   a h2{
@@ -80,27 +84,4 @@
     opacity: 1;
   }
 
-  .title-wrapper {
-    z-index: 1;
-		height: calc(20vh - 0.5em + 5.5px);
-    border-bottom: 2px dashed gray;
-    padding: 1em;
-    margin-top: -5.5px;
-    display: flex;
-    align-items: flex-end;
-    position: sticky;
-    top:2em;
-  }
-  .projects {
-    padding: 4em;
-    max-width: 1200px;
-    margin: auto;
-
-  }
-  .title {
-    opacity: 1.0;
-    transition: 0.2s ease-out;
-    padding-left: 1em;
-    font-size: calc(2vw + 1.5em);
-  }
 </style>

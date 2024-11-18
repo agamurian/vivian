@@ -12,7 +12,7 @@ export const menu: Array<menuItem> = [
 	{ href: '/', en: 'About', ru: 'Об авторе' },
 	{ href: '/projects', en: 'Projects', ru: 'Проекты' },
 	{ href: '/news', en: 'News', ru: 'Новости' },
-	{ href: '/articles', en: 'Publications', ru: 'Публикации' },
+	{ href: '/publications', en: 'Publications', ru: 'Публикации' },
 	{ href: '/exhibitions', en: 'Exhibitions', ru: 'Выставки' }
 ];
 

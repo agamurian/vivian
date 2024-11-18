@@ -41,7 +41,7 @@
     const quote_ps = contentDiv.querySelectorAll('.local-content blockquote > p');
     quote_ps.forEach(p => {
       p.style.margin = "4em";
-      p.style.marginLeft = "calc(10vw + 2em)";
+      p.style.marginLeft = "calc(8em)";
       p.style.maxWidth = "45em"; //-> tag in content
       });
     // in content images are inside ps. cancell out the margins
@@ -49,18 +49,12 @@
     images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
       img.style.width = "100%";
-      img.style.marginTop = "3em";
-      img.style.objectFit = "scale-down";
-      img.style.padding = "2em";
+      img.style.marginTop = "4em";
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
-      img.style.width = "calc(100vw - 3em + 4px)";
-      img.style.maxWidth = "100vw";
-      img.style.marginLeft = "-4em";
-      img.style.marginBottom = "1em";
-      img.alt = "Vivian Del Rio"
+      img.style.objectFit = "cover";
     });
     const paired_images_wrappers = contentDiv.querySelectorAll('.local-content p em');
     paired_images_wrappers.forEach(el => {
@@ -70,7 +64,7 @@
         el.style.display = "block";
       }
       el.style.gap = "4em";
-      el.style.padding = "2em";
+      el.style.marginTop = "3em";
     });
     const paired_images = contentDiv.querySelectorAll('.local-content p em > img');
     paired_images.forEach(img => {
@@ -81,7 +75,6 @@
       img.style.marginTop = "1em";
       img.style.maxWidth = "calc(100vw - 10em)";
       img.style.display = "block";
-      img.style.objectFit = "scale-down";
     });
   }
 
@@ -124,6 +117,7 @@
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 {#each data.projects.data as project}
   {#if project.url === url}
+    <img class="big-img" src="project.bigImage" />
     {#each data.projectsTranslations.data as et}
       {#if et.projects_id == project.id}
         {#if et.languages_code == mapping[$lang]}

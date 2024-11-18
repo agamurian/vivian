@@ -28,22 +28,22 @@
 
   <div class="flex flex-col gap-8 py-8">
     
-{#each data.exhibitions.data as exhibition}
-  {#each data.exhibitionsTranslations.data as et}
-    {#if et.exhibitions_id == exhibition.id}
+{#each data.publications.data as publication}
+  {#each data.publicationsTranslations.data as et}
+    {#if et.publications_id == publication.id}
       {#if et.languages_code == locale_mapping[$lang]}
     <div class="wrapper-right wrapper-medium" >
-      <div class="exhibition">
+      <div class="publication">
         <a href="/">
       <div class="content-container medium py-4">
         <p class="date">
-          {yearOfDate(exhibition.date)}
+          {yearOfDate(publication.date)}
         </p>
         <p class="title-small">
           {et.title}
         </p>
         <p class="description">
-          {et.description}
+          {et.source_name}
         </p>
       </div>
         </a>
@@ -58,8 +58,8 @@
   </div>
 
 <style lang="postcss">
-  .exhibition{transition: 0.2s ease-out}
-  .exhibition:hover {
+  .publication{transition: 0.2s ease-out}
+  .publication:hover {
     background-color: #8884;
   }
   .date {

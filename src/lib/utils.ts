@@ -8,6 +8,10 @@ export function formatDate(date: string): string {
 	return date.split('T')[0].split('-').join('/');
 }
 
+export function yearOfDate(date: string): string {
+	return date.split('T')[0].split('-')[0];
+}
+
 export function formatToHM(time: Date) {
 	return time.toLocaleTimeString('en-US', {
 		hour12: false,

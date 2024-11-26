@@ -5,7 +5,7 @@ export function getImageFromApi(hash: string, maxWidth?: number): string {
 }
 
 export function formatDate(date: string): string {
-	return date.split('T')[0].split('-').join('/');
+	return date.split('T')[0].split('-').reverse().join('.');
 }
 
 export function yearOfDate(date: string): string {

@@ -4,8 +4,7 @@
 </script>
 
 <div class="content"
-  style="color: { ($theme == 'dark' ) ? $white : $black }; transition: 0.2s ease;"
+  style="color: { ($theme == 'dark' ) ? $white : $black }; transition: 0.1s ease-out;"
   >
 	<slot />
 </div>
-

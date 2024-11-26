@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { lang,contentChanged,theme,black,white } from '$lib/stores';
-  import { debounce } from '$lib/utils';
+  import { debounce,yearOfDate } from '$lib/utils';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -20,7 +20,7 @@
 	$: innerHeight = 2000
   let sizeReallyChanged = 2000
 
-  const maxImgWidth = 2000
+  const maxImgWidth = 1200
 
   function getSizedImg(src,width){
     const srcNoQuery = src.split('?')[0]
@@ -115,20 +115,33 @@
 </script>
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
-{#each data.projects.data as project}
-  {#if project.url === url}
-    {#each data.projectsTranslations.data as et}
-      {#if et.projects_id == project.id}
+{#each data.publications.data as publication}
+  {#if publication.url === url}
+    {#each data.publicationsTranslations.data as et}
+      {#if et.publications_id == publication.id}
         {#if et.languages_code == mapping[$lang]}
-          <div class="project">
-            <div class="flex-1">
-              <div class="title-wrapper"
-          style="border-color: {border_color}"
-                >
-                <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
-              </div>
-            </div>
-            <div class="local-content" bind:this={contentDiv}>
+        <div class="title-wrapper-big"
+          style="
+          border-color: {border_color};
+          background-color: {background_color};
+          "
+          >
+          <div class="centered-h content-container large">
+            <p class="title" bind:this={titleElement}>
+					  {et.title}
+          </p>
+          <div class="bottom-line">
+            <span class="bottom-line-element date">
+              {yearOfDate(publication.date)}
+            </span>
+            <span class="bottom-line-element description">
+              {et.source_name}
+            </span>
+          </div>
+          </div>
+        </div>
+          <div class="publication">
+            <div class="" bind:this={contentDiv}>
               {#key mounted}
               {#key sizeReallyChanged}
                   {@html et.content}
@@ -143,31 +156,14 @@
 {/each}
 
 <style>
-  .project {
+  .publication {
     overflow-x: hidden;
   }
-  .local-content {
-    max-width: 1200px;
-    opacity: 0.0;
-    transition: 2s ease-out;
-    font-size: 1em;
-    padding: 2em;
-    padding-top: 0;
-    overflow-x: hidden;
-    margin: auto;
+  .date {
+    font-weight: 300;
   }
-  .title {
-    opacity: 0.0;
-    transition: 1s ease-out;
-    padding-left: 1em;
-    font-size: calc(2vw + 1.5em);
-  }
-  .title-wrapper {
-    height: calc(20vh - 0.5em);
-    border-bottom: 2px dashed gray;
-    padding: 1em;
-    display: flex;
-    align-items: flex-end;
+  .description {
+    color: #888;
   }
 </style>
 

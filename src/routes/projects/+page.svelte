@@ -74,14 +74,7 @@
   }
 
   a p {
-    transition: 0.4s ease-out;
     text-decoration: none;
-    opacity: 0;
-  }
-
-  a:hover p {
-    text-decoration: none;
-    opacity: 1;
   }
 
 </style>

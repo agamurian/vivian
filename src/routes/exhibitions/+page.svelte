@@ -43,7 +43,7 @@
           {et.title}
         </p>
         <p class="description">
-          {et.source_name}
+          {et.description}
         </p>
       </div>
         </a>

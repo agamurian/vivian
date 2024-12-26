@@ -134,8 +134,10 @@
             <span class="bottom-line-element date">
               {yearOfDate(publication.date)}
             </span>
-            <span class="bottom-line-element description">
+             <span class="bottom-line-element description">
+               <a href={publication.source_link} >
               {et.source_name}
+              </a>
             </span>
           </div>
           </div>
@@ -171,14 +173,15 @@
     display: flex;
     justify-content: space-between;
   }
-  .bottom-line-element {
-  }
   .description {
     color: #888;
     right:0;
   }
   .title-dynamic{
     font-size: calc(0.2em + 1vw + 1vh);
+  }
+  a {
+    text-decoration: 2px underline #80808080;
   }
 </style>
 

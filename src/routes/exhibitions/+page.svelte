@@ -34,7 +34,7 @@
       {#if et.languages_code == locale_mapping[$lang]}
     <div class="wrapper-right wrapper-medium" >
       <div class="exhibition">
-        <a href="/">
+        <a href={"/exhibitions/"+exhibition.url}>
       <div class="content-container medium py-4">
         <p class="date">
           {yearOfDate(exhibition.date)}

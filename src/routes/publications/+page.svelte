@@ -39,7 +39,7 @@
         <p class="date">
           {yearOfDate(publication.date)}
         </p>
-        <p class="title-news">
+        <p class="title-dynamic">
           {et.title}
         </p>
         <p class="description">

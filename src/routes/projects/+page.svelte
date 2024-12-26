@@ -45,7 +45,7 @@
     <!-- Right Column (Text) -->
     <div class="w-full lg:w-1/3 md:w-1/2 flex flex-col justify-between" >
         <!-- Title at the top -->
-        <h2 class="title-news" style="margin-top: -0.125em">{et.title}</h2>
+        <h2 class="title-dynamic" style="margin-top: -0.125em">{et.title}</h2>
 
         <!-- Description at the bottom -->
         <p class="text-sm leading-relaxed mt-2">

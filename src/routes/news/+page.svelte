@@ -36,7 +36,7 @@
         <p class="date">
           {formatDate(newd.date)}
         </p>
-        <p class="title-news">
+        <p class="title-dinamic">
           {et.title}
         </p>
         <img class="news-image" src={getImageFromApi(newd.image)} />

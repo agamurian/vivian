@@ -120,14 +120,14 @@
     {#each data.publicationsTranslations.data as et}
       {#if et.publications_id == publication.id}
         {#if et.languages_code == mapping[$lang]}
-        <div class="title-wrapper-big"
+        <div class="title-wrapper"
           style="
           border-color: {border_color};
           background-color: {background_color};
           "
           >
           <div class="centered-h content-container large">
-            <p class="title" bind:this={titleElement}>
+            <p class="title-dynamic" bind:this={titleElement}>
 					  {et.title}
           </p>
           <div class="bottom-line">
@@ -141,12 +141,16 @@
           </div>
         </div>
           <div class="publication">
+  <div class="centered-h content-container small">
+    <div class="col-wrapper top-wrapper px-0 md:px-16 py-8">
             <div class="" bind:this={contentDiv}>
               {#key mounted}
               {#key sizeReallyChanged}
                   {@html et.content}
               {/key}
               {/key}
+            </div>
+            </div>
             </div>
           </div>
         {/if}
@@ -162,8 +166,19 @@
   .date {
     font-weight: 300;
   }
+  .bottom-line {
+    margin-top:1em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bottom-line-element {
+  }
   .description {
     color: #888;
+    right:0;
+  }
+  .title-dynamic{
+    font-size: calc(0.2em + 1vw + 1vh);
   }
 </style>
 

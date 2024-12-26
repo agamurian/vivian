@@ -27,11 +27,12 @@
   {/each}
 
   <br>
-{#each data.news.data as newd}
+{#each data.news.data.reverse() as newd}
   {#each data.newsTranslations.data as et}
     {#if et.news_id == newd.id}
       {#if et.languages_code == locale_mapping[$lang]}
-      <div class="content-container centered-h small py-4" >
+      <div class="content-container medium centered-h py-4" >
+        <div class="extrasmall px-0 md:px-16">
         <p class="date">
           {formatDate(newd.date)}
         </p>
@@ -47,6 +48,7 @@
           +
         </p>
         <br>
+        </div>
       </div>
     {/if}
     {/if}
@@ -57,11 +59,6 @@
 
   .date {
     font-weight: 300;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-  }
-  .title-news{
-    font-size: 2em;
     margin-top: 0.25em;
     margin-bottom: 0.25em;
   }

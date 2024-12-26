@@ -32,14 +32,14 @@
   {#each data.publicationsTranslations.data as et}
     {#if et.publications_id == publication.id}
       {#if et.languages_code == locale_mapping[$lang]}
-    <div class="wrapper-right wrapper-medium" >
+    <div class="wrapper-right wrapper-infinite" >
       <div class="publication">
         <a href={"/publications/"+publication.url}>
-      <div class="content-container medium py-4">
+      <div class="px-1 md:px-16 medium py-4">
         <p class="date">
           {yearOfDate(publication.date)}
         </p>
-        <p class="title-small">
+        <p class="title-news">
           {et.title}
         </p>
         <p class="description">

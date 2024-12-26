@@ -20,7 +20,7 @@
 	$: innerHeight = 2000
   let sizeReallyChanged = 2000
 
-  const maxImgWidth = 2000
+  const maxImgWidth = 1200
 
   function getSizedImg(src,width){
     const srcNoQuery = src.split('?')[0]
@@ -33,23 +33,16 @@
     // all content is inside th p
     const ps = contentDiv.querySelectorAll('.local-content p');
     ps.forEach(p => {
-      p.style.fontSize = "0.75em";
       p.style.lineHeight = "1.5";
-      p.style.fontWeight = "300";
-      p.style.margin = "1em"
-      });
-    const quote_ps = contentDiv.querySelectorAll('.local-content blockquote > p');
-    quote_ps.forEach(p => {
-      p.style.margin = "4em";
-      p.style.marginLeft = "calc(8em)";
-      p.style.maxWidth = "45em"; //-> tag in content
+      p.style.margin = "1em";
       });
     // in content images are inside ps. cancell out the margins
     const images = contentDiv.querySelectorAll('.local-content p > img');
     images.forEach(img => {
       img.style.pointerEvents = "none"; // secure from download
       img.style.width = "100%";
-      img.style.marginTop = "4em";
+      img.style.marginTop = "2em";
+      img.style.marginBottom = "2em";
     });
     const big_images = contentDiv.querySelectorAll('.local-content p strong > img');
     big_images.forEach(img => {
@@ -63,8 +56,7 @@
       }else{
         el.style.display = "block";
       }
-      el.style.gap = "4em";
-      el.style.marginTop = "3em";
+      el.style.gap = "2em";
     });
     const paired_images = contentDiv.querySelectorAll('.local-content p em > img');
     paired_images.forEach(img => {
@@ -125,15 +117,19 @@
               <div class="title-wrapper"
           style="border-color: {border_color}"
                 >
+          <div class="centered-h content-container large">
                 <p class="title" bind:this={titleElement}><b>{et.title}</b></p>
               </div>
+              </div>
             </div>
+            <div class="px-0 md:px-16">
             <div class="local-content" bind:this={contentDiv}>
               {#key mounted}
               {#key sizeReallyChanged}
                   {@html et.content}
               {/key}
               {/key}
+            </div>
             </div>
           </div>
         {/if}
@@ -151,23 +147,14 @@
     opacity: 0.0;
     transition: 2s ease-out;
     font-size: 1em;
-    padding: 2em;
-    padding-top: 0;
+    padding: 3em;
+    padding-top: 2em;
     overflow-x: hidden;
-    margin: auto;
+    margin: 0;
   }
   .title {
     opacity: 0.0;
     transition: 1s ease-out;
-    padding-left: 1em;
-    font-size: calc(2vw + 1.5em);
-  }
-  .title-wrapper {
-    height: calc(20vh - 0.5em);
-    border-bottom: 2px dashed gray;
-    padding: 1em;
-    display: flex;
-    align-items: flex-end;
   }
 </style>
 

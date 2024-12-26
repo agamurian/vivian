@@ -21,8 +21,6 @@
           style="
           border-color: {border_color};
           background-color: {background_color};
-          position: relative;
-          margin-top: calc(-2em - 5.5px);
           "
           >
           <div class="centered-h content-container large">
@@ -33,7 +31,7 @@
         </div>
   
   <div class="centered-h content-container small">
-    <div class="col-wrapper top-wrapper">
+    <div class="col-wrapper top-wrapper px-0 md:px-16">
       <div class="col right-col">
         <img class="portrait" src={getImageFromApi(data.mainPage.data.portrait, 500)} alt={translation.author_name} />
       </div>
@@ -61,7 +59,7 @@
     max-width: 100%;
   }
   .top-wrapper{
-    margin-top: 4em;
+    margin-top: 3em;
     justify-content: center;
   }
   .right-col {

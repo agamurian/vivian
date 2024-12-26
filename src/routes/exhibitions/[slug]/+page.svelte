@@ -134,9 +134,6 @@
             <span class="bottom-line-element date">
               {yearOfDate(exhibition.date)}
             </span>
-            <span class="bottom-line-element description">
-              {et.source_name}
-            </span>
           </div>
           </div>
         </div>
@@ -146,7 +143,10 @@
             <div class="" bind:this={contentDiv}>
               {#key mounted}
               {#key sizeReallyChanged}
-                  {@html et.content}
+                  {et.description}
+                  <br/>
+                  <br/>
+                  {@html et.contnet}
               {/key}
               {/key}
             </div>

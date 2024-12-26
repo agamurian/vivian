@@ -27,7 +27,7 @@
   {/each}
 
   <br>
-{#each data.news.data.reverse() as newd}
+{#each data.news.data.reverse() as newd (newd.date)}
   {#each data.newsTranslations.data as et}
     {#if et.news_id == newd.id}
       {#if et.languages_code == locale_mapping[$lang]}

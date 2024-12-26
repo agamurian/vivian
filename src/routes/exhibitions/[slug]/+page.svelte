@@ -134,6 +134,9 @@
             <span class="bottom-line-element date">
               {yearOfDate(exhibition.date)}
             </span>
+            <span class="bottom-line-element description">
+                  {et.description}
+            </span>
           </div>
           </div>
         </div>
@@ -143,8 +146,6 @@
             <div class="" bind:this={contentDiv}>
               {#key mounted}
               {#key sizeReallyChanged}
-                  {et.description}
-                  <br/>
                   <br/>
                   {@html et.contnet}
               {/key}
@@ -172,6 +173,7 @@
     justify-content: space-between;
   }
   .bottom-line-element {
+    margin-right: 1em;
   }
   .description {
     color: #888;

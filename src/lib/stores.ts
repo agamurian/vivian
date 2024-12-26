@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 export const contentChanged = writable<boolean>(false);
 export const hideNav = writable<boolean>(false);
 export const white = writable('#fefefe');
-export const black = writable('#101010');
+export const black = writable('#1e1e1e');
 export const backgroundColor = writable('#888888');
 export const localtitle = writable('');
 

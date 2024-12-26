@@ -32,18 +32,18 @@
   {#each data.exhibitionsTranslations.data as et}
     {#if et.exhibitions_id == exhibition.id}
       {#if et.languages_code == locale_mapping[$lang]}
-    <div class="wrapper-right wrapper-medium" >
+    <div class="wrapper-right wrapper-infinite" >
       <div class="exhibition">
         <a href={"/exhibitions/"+exhibition.url}>
-      <div class="content-container medium py-4">
+      <div class="px-1 md:px-16 medium py-4">
         <p class="date">
           {yearOfDate(exhibition.date)}
         </p>
-        <p class="title-small">
+        <p class="title-dynamic">
           {et.title}
         </p>
         <p class="description">
-          {et.description}
+          {et.source_name}
         </p>
       </div>
         </a>

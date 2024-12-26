@@ -64,9 +64,9 @@
       if (img)
       img.style.width = "100%";
       img.style.height = "auto";
-      img.style.marginTop = "1em";
-      img.style.maxWidth = "calc(100vw - 10em)";
-      img.style.display = "block";
+      img.style.marginTop = "0em";
+      img.style.width = "calc(50% - 1em)";
+      img.style.display = "inline-block";
     });
   }
 
